@@ -1,0 +1,27 @@
+@import "ember-cli-bootstrap-4/bootstrap";
+
+@import "ember-bootstrap/bootstrap";
+@import "./table";
+
+.btn {
+  background: transparent !important;
+  color: #678740 !important;
+  border: 1px solid #678740;
+  width: 160px;
+}
+.btn:hover {
+  background-color: #678740 !important;
+  color: white !important;
+}
+.col {
+  text-align: center;
+}
+.table-wrapper {
+  margin-top: 80px;
+}
+// .active {
+//   background-color: #678740 !important;
+//   color: white !important;
+// }
+
+@import "ember-cli-bootstrap-4/bootstrap";

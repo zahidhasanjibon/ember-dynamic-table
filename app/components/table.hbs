@@ -1,0 +1,46 @@
+<div class="table-responsive">
+
+  <table class="table fadde">
+
+    <thead>
+      <tr>
+        {{#each @tableData.tableColumn as |column|}}
+          <td>{{column}}</td>
+        {{/each}}
+        <td>Action</td>
+      </tr>
+    </thead>
+    <tbody>
+
+      {{#each @tableData.data as |row|}}
+        <tr>
+          {{#each-in row as |key value|}}
+            {{#if (eq key "_id")}}
+              <td>
+                <div class="d-flex">
+                  <div class="font-weight-bold">{{value}}</div>
+                  <div class="ml-md-3 ml-1">
+                    <select id="inputState" class="form-control">
+                      <option selected>Action</option>
+                      <option>abc</option>
+                      <option>efg</option>
+                    </select>
+                  </div>
+                </div>
+              </td>
+            {{else}}
+              <td>{{value}}</td>
+            {{/if}}
+          {{/each-in}}
+          <td>
+            <select id="inputState" class="form-control">
+              <option selected>Action</option>
+              <option>abc</option>
+              <option>efg</option>
+            </select></td>
+        </tr>
+      {{/each}}
+
+    </tbody>
+  </table>
+</div>
