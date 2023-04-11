@@ -1,5 +1,5 @@
 table {
-  margin-top: 60px;
+  width: 1600px !important;
 }
 body {
   padding-bottom: 200px;
@@ -9,7 +9,7 @@ thead tr > td {
   font-weight: bold !important;
 }
 thead tr > td:first-child {
-  width: 180px !important;
+  width: 150px !important;
 }
 thead tr > td:last-child {
   width: 140px !important;
@@ -29,6 +29,10 @@ thead tr > td :nth-child(1) {
 .tab-menu > li > button {
   margin: 0 auto;
   border: 1px solid #678740 !important;
+}
+.nav-item button {
+  padding: 0.5rem !important;
+  width: 160px;
 }
 .tab-menu > li > button.active {
   background-color: #678740 !important;
@@ -56,26 +60,50 @@ table thead tr > td {
 }
 
 @media (width < 1200px) {
-  .nav-item button {
-    height: 63px;
-  }
+  // .nav-item button {
+  //   height: 63px;
+  // }
 }
 
 @media (width < 992px) {
-  table {
-    margin-top: 50px;
-  }
   .nav-item button {
-    height: 64px;
+    width: 150px;
   }
+  // .nav-item:last-child button {
+  //   margin-left: inherit;
+  // }
 }
 
+table {
+  cursor: grab;
+}
+table.grabbing {
+  cursor: grabbing;
+}
 @media (width < 768px) {
   .nav-pills {
     grid-row-gap: 18px;
   }
+  .nav-item:nth-child(4) {
+    flex-grow: 0;
+  }
   table {
-    margin-top: 25px;
     width: 576px !important;
   }
+}
+
+@media (width <= 556px) {
+  // .nav-item button {
+  //   width: 238px;
+  // }
+}
+
+@media (width <= 552px) {
+  // .nav-item:nth-child(4) {
+  //   flex-grow: 1;
+  // }
+
+  // .nav-item:last-child button {
+  //   margin-left: auto;
+  // }
 }

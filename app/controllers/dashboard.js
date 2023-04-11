@@ -7,7 +7,18 @@ export default class DashboardController extends Controller {
   @service store;
   @tracked data = {
     id: 'zakat',
-    tableColumn: ['ID', 'Name', 'address', 'phone', 'country'],
+    tableColumn: [
+      'ID',
+      'name',
+      'address',
+      'phone',
+      'country',
+      'lan',
+      'money',
+      'book',
+      'pen',
+      'apple',
+    ],
     data: [
       {
         _id: 1,
@@ -15,6 +26,11 @@ export default class DashboardController extends Controller {
         address: 'dhaka',
         phone: '01732432',
         country: 'bangladesh',
+        lan: 'ed',
+        money: '2323',
+        book: '234',
+        pen: 'werw',
+        apple: 'effa',
       },
       {
         _id: 2,
@@ -22,6 +38,11 @@ export default class DashboardController extends Controller {
         address: 'dhaka',
         phone: '01732432',
         country: 'bangladesh',
+        lan: 'ed',
+        money: '2323',
+        book: '234',
+        pen: 'werw',
+        apple: 'effa',
       },
       {
         _id: 3,
@@ -29,6 +50,11 @@ export default class DashboardController extends Controller {
         address: 'dhaka',
         phone: '01732432',
         country: 'london',
+        lan: 'ed',
+        money: '2323',
+        book: '234',
+        pen: 'werw',
+        apple: 'effa',
       },
     ],
   };

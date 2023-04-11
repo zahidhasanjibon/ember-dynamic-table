@@ -3,11 +3,11 @@
 <div class="container">
 
   <ul
-    class="row mt-5 nav nav-pills mb-3 tab-menu"
+    class="d-flex justify-content-center mt-5 nav nav-pills mb-3 tab-menu"
     id="pills-tab"
     role="tablist"
   >
-    <li class="col nav-item" role="presentation">
+    <li class="nav-item" role="presentation">
       <button
         class="nav-link active"
         id="pills-home-tab"
@@ -20,7 +20,7 @@
         {{on "click" (fn this.getZakatTakerData "zakat")}}
       >Zakat taker</button>
     </li>
-    <li class="col nav-item" role="presentation">
+    <li class="nav-item" role="presentation">
       <button
         class="nav-link"
         id="pills-profile-tab"
@@ -33,7 +33,7 @@
         {{on "click" (fn this.getLoanData "loan")}}
       >Loan payout</button>
     </li>
-    <li class="col nav-item" role="presentation">
+    <li class="nav-item" role="presentation">
       <button
         class="nav-link"
         id="pills-contact-tab"
@@ -46,7 +46,7 @@
         {{on "click" (fn this.getMedicalData "medical")}}
       >Medical</button>
     </li>
-    <li class="col nav-item" role="presentation">
+    <li class="nav-item" role="presentation">
       <button
         class="nav-link"
         id="pills-a-tab"
@@ -59,7 +59,7 @@
         {{on "click" (fn this.getEducationData "education")}}
       >Education training</button>
     </li>
-    <li class="col nav-item" role="presentation">
+    <li class="nav-item" role="presentation">
       <button
         class="nav-link"
         id="pills-b-tab"
@@ -73,57 +73,7 @@
       >Family member</button>
     </li>
   </ul>
-  {{!-- 
-  <div class="tab-content" id="pills-tabContent">
-    <div
-      class="tab-pane fade show active"
-      id="pills-home"
-      role="tabpanel"
-      aria-labelledby="pills-home-tab"
-    >
 
-      <Table @tableData={{this.data}} />
-
-    </div>
-    <div
-      class="tab-pane fade"
-      id="pills-profile"
-      role="tabpanel"
-      aria-labelledby="pills-profile-tab"
-    >
-      <Table @tableData={{this.data}} />
-
-    </div>
-    <div
-      class="tab-pane fade"
-      id="pills-contact"
-      role="tabpanel"
-      aria-labelledby="pills-contact-tab"
-    >
-      <Table @tableData={{this.data}} />
-
-    </div>
-    <div
-      class="tab-pane fade"
-      id="pills-a"
-      role="tabpanel"
-      aria-labelledby="pills-a-tab"
-    >
-      <Table @tableData={{this.data}} />
-
-    </div>
-    <div
-      class="tab-pane fade"
-      id="pills-b"
-      role="tabpanel"
-      aria-labelledby="pills-b-tab"
-    >
-      <Table @tableData={{this.data}} />
-
-    </div>
-
-  </div> --}}
-  <br />
   <br />
   <Table @tableData={{this.data}} />
   <div style="margin-top:160px "></div>

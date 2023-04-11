@@ -1,6 +1,6 @@
-<div class="table-responsive">
+<div class="table-responsive table-wrapper">
 
-  <table class="table fadde">
+  <table class="table fadde" {{did-insert this.dragFunctionality}}>
 
     <thead>
       <tr>
@@ -17,9 +17,9 @@
           {{#each-in row as |key value|}}
             {{#if (eq key "_id")}}
               <td>
-                <div class="d-flex">
+                <div class="">
                   <div class="font-weight-bold">{{value}}</div>
-                  <div class="ml-md-3 ml-1">
+                  <div class="mt-2">
                     <select id="inputState" class="form-control">
                       <option selected>Action</option>
                       <option>abc</option>

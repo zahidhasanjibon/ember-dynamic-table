@@ -2,25 +2,40 @@
 export default [
   {
     id: 'zakat',
-        tableColumn:['ID','name','address','phone','country'],
+        tableColumn:['ID','name','address','phone','country','lan','money','book','pen','apple'],
     data:  [
         {_id:1,
           name:'md karim',
           address:'dhaka',
           phone:'01732432',
           country:'bangladesh',
+          lan:'ed',
+          money:'2323',
+          book:'234',
+          pen:'werw',
+          apple:'effa'
         },
         {_id:2,
           name:'md rahim',
           address:'dhaka',
           phone:'01732432',
           country:'bangladesh',
+          lan:'ed',
+          money:'2323',
+          book:'234',
+          pen:'werw',
+          apple:'effa'
         },
         {_id:3,
           name:'md kamal',
           address:'dhaka',
           phone:'01732432',
           country:'london',
+           lan:'ed',
+          money:'2323',
+          book:'234',
+          pen:'werw',
+          apple:'effa'
         },
       ]
     
