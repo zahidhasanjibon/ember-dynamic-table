@@ -6,15 +6,13 @@ export default class TableComponent extends Component {
     const table = document.querySelector('table');
     const tableWrapper = document.querySelector('.table-wrapper');
     let isDragging = false;
-    let initialDragPosition;
-    let initialScrollPosition;
+    let initialDragPositionX;
+    let initialScrollPositionX;
 
     tableWrapper.addEventListener('mousedown', (e) => {
       isDragging = true;
-      initialDragPosition = e.pageX - tableWrapper.offsetLeft;
-
-      console.log(initialDragPosition);
-      initialScrollPosition = tableWrapper.scrollLeft;
+      initialDragPositionX = e.pageX - tableWrapper.offsetLeft;
+      initialScrollPositionX = tableWrapper.scrollLeft;
       table.classList.add('grabbing');
     });
 
@@ -43,12 +41,9 @@ export default class TableComponent extends Component {
       if (!isDragging) return;
       e.preventDefault();
       // const dragingValueFrom =
-      const dragCursorMovingValue = e.pageX - tableWrapper.offsetLeft;
-
-      const actualdraggingValue = dragCursorMovingValue - initialDragPosition;
-      console.log(actualdraggingValue);
-
-      tableWrapper.scrollLeft = initialScrollPosition - actualdraggingValue;
+      const dragCursorMovingValueX = e.pageX - tableWrapper.offsetLeft;
+      const actualdraggingValue = dragCursorMovingValueX - initialDragPositionX;
+      tableWrapper.scrollLeft = initialScrollPositionX - actualdraggingValue;
     });
   }
 }

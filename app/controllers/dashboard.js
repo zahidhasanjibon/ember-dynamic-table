@@ -26,7 +26,7 @@ export default class DashboardController extends Controller {
         address: 'dhaka',
         phone: '01732432',
         country: 'bangladesh',
-        lan: 'ed',
+        lan: 'edwsss',
         money: '2323',
         book: '234',
         pen: 'werw',
@@ -59,7 +59,7 @@ export default class DashboardController extends Controller {
     ],
   };
 
-  @action async getZakatTakerData(nameOfdataToFind) {
+  @action getZakatTakerData(nameOfdataToFind) {
     const findedData = db.find(
       (singleData) => singleData.id === nameOfdataToFind
     );
@@ -70,7 +70,7 @@ export default class DashboardController extends Controller {
       table.classList.add('fadde');
     }, 20);
   }
-  @action async getLoanData(nameOfdataToFind) {
+  @action getLoanData(nameOfdataToFind) {
     const findedData = db.find(
       (singleData) => singleData.id === nameOfdataToFind
     );
@@ -81,7 +81,7 @@ export default class DashboardController extends Controller {
       table.classList.add('fadde');
     }, 20);
   }
-  @action async getEducationData(nameOfdataToFind) {
+  @action getEducationData(nameOfdataToFind) {
     const findedData = db.find(
       (singleData) => singleData.id === nameOfdataToFind
     );
@@ -92,7 +92,7 @@ export default class DashboardController extends Controller {
       table.classList.add('fadde');
     }, 20);
   }
-  @action async getMedicalData(nameOfdataToFind) {
+  @action getMedicalData(nameOfdataToFind) {
     const findedData = db.find(
       (singleData) => singleData.id === nameOfdataToFind
     );
@@ -103,7 +103,7 @@ export default class DashboardController extends Controller {
       table.classList.add('fadde');
     }, 20);
   }
-  @action async getFamilyData(nameOfdataToFind) {
+  @action getFamilyData(nameOfdataToFind) {
     const findedData = db.find(
       (singleData) => singleData.id === nameOfdataToFind
     );

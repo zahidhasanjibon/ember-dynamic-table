@@ -13,7 +13,7 @@ export default [
           money:'2323',
           book:'234',
           pen:'werw',
-          apple:'effa'
+          apple:'effa',
         },
         {_id:2,
           name:'md rahim',

@@ -11,7 +11,18 @@ module('Integration | Component | table', function (hooks) {
     // Handle any actions with this.set('myAction', function(val) { ... });
     this.set('tableData', {
       id: 'zakat',
-      tableColumn: ['ID', 'name', 'address', 'phone', 'country'],
+      tableColumn: [
+        'ID',
+        'name',
+        'address',
+        'phone',
+        'country',
+        'lan',
+        'money',
+        'book',
+        'pen',
+        'apple',
+      ],
       data: [
         {
           _id: 1,
@@ -19,6 +30,11 @@ module('Integration | Component | table', function (hooks) {
           address: 'dhaka',
           phone: '01732432',
           country: 'bangladesh',
+          lan: 'ed',
+          money: '2323',
+          book: '234',
+          pen: 'werw',
+          apple: 'effa',
         },
         {
           _id: 2,
@@ -26,6 +42,11 @@ module('Integration | Component | table', function (hooks) {
           address: 'dhaka',
           phone: '01732432',
           country: 'bangladesh',
+          lan: 'ed',
+          money: '2323',
+          book: '234',
+          pen: 'werw',
+          apple: 'effa',
         },
         {
           _id: 3,
@@ -33,16 +54,30 @@ module('Integration | Component | table', function (hooks) {
           address: 'dhaka',
           phone: '01732432',
           country: 'london',
+          lan: 'ed',
+          money: '2323',
+          book: '234',
+          pen: 'werw',
+          apple: 'effa',
         },
       ],
     });
 
     await render(hbs`<Table @tableData={{this.tableData}} />`);
 
-    // assert.strictEqual(
-    //   this.element.querySelectorAll('thead tr td').length,
-    //   3,
-    //   'two results rendered'
-    // );
+    assert.strictEqual(
+      this.element.querySelectorAll('thead tr td').length,
+      11,
+      '11 table column results rendered ok'
+    );
+    assert.strictEqual(
+      this.element.querySelectorAll('tbody tr td').length,
+      33,
+      '33 table body td results rendered ok'
+    );
+
+    assert.dom('thead').exists();
+    assert.dom('#selectAction1').exists();
+    assert.dom('#selectAction2').exists();
   });
 });
