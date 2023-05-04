@@ -1,0 +1,16 @@
+<LinkTo @route="index">
+  Home
+</LinkTo>
+{{! template-lint-disable no-inline-styles }}
+<LinkTo style="margin-left:14px;" @route="inbox">
+  inbox
+</LinkTo>
+<LinkTo style="margin-left:14px;" @route="dashboard">
+  dashboard
+</LinkTo>
+
+{{#if this.session.isAuthenticated}}
+  <button type="button" style="margin-left:14px;" {{on "click" this.logout}}>
+    logout
+  </button>
+{{/if}}

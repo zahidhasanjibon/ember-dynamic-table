@@ -1,0 +1,12 @@
+<form
+  action="
+"
+>
+
+  {{! template-lint-disable require-input-label }}
+  <input {{on "click" this.clic}} value={{this.profile.firstName}} />
+  <div class="error">
+    {{v-get this.profile "firstName" "message"}}
+  </div>
+
+</form>

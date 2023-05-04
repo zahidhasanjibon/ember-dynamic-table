@@ -39,6 +39,7 @@ export default class TableComponent extends Component {
       // console.log('offset', event.offsetX);
       // console.log('client', event.clientX);
       if (!isDragging) return;
+
       e.preventDefault();
       // const dragingValueFrom =
       const dragCursorMovingValueX = e.pageX - tableWrapper.offsetLeft;

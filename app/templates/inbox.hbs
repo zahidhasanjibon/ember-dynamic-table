@@ -1,0 +1,8 @@
+{{page-title "Inbox"}}
+{{outlet}}
+
+<h2>inbox page</h2>
+
+{{#each @model as |messageData|}}
+  <h6>{{messageData.message}}</h6>
+{{/each}}

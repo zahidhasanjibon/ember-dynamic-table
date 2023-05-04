@@ -1,10 +1,87 @@
-.img-div {
+.profile-div {
   text-align: center;
   width: 50%;
 }
-.img-div img {
-  width: 150px;
+.profile-div img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .form {
   grid-row-gap: 35px;
+}
+.file-btn {
+  position: relative;
+  overflow: hidden;
+}
+.file-btn input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  opacity: 0;
+  cursor: inherit;
+  display: block;
+}
+.file-input-label {
+  padding: 0px 10px;
+  display: table-cell;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}
+.file-input:hover {
+  background-color: #678740 !important;
+  outline: none;
+  border: 1px solid #678740 !important;
+}
+form {
+  border: 1px solid #f8faf8;
+  border-radius: 5px;
+  padding: 44px 15px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.file-btn,
+.save-btn {
+  background: transparent !important;
+  color: #678740 !important;
+  border: 1px solid #678740;
+  width: 160px;
+  padding: 4px 0px;
+  &:hover {
+    background-color: #678740 !important;
+    color: white !important;
+    outline: none;
+    border: 1px solid #678740;
+    cursor: pointer;
+  }
+}
+.save-btn[disabled] {
+  cursor: not-allowed;
+}
+.error {
+  color: red;
+}
+
+// responsive
+
+@media (width < 992px) {
+  .file-btn,
+  .save-btn {
+    width: 110px;
+  }
+}
+
+@media (width < 768px) {
+  .profile-div {
+    width: 100%;
+  }
 }

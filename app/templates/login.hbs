@@ -1,0 +1,23 @@
+{{page-title "Login"}}
+{{outlet}}
+
+{{! template-lint-disable no-inline-styles }}
+<div style="margin:20px">
+
+  <h2>login</h2>
+
+  <form action="" {{on "submit" this.submit}}>
+    <label for="username">UserName</label>
+    {{! template-lint-disable require-input-label }}
+
+    <Input @type="text" name="username" @value={{this.userName}} />
+    <label for="password">Password</label>
+    <Input @type="password" name="password" @value={{this.password}} />
+    <input type="submit" value="login" />
+
+  </form>
+
+  {{#if this.error}}
+    <h6>{{this.error}}</h6>
+  {{/if}}
+</div>

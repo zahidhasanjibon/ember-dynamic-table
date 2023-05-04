@@ -18,7 +18,7 @@
           {{#each-in row as |key value|}}
             {{#if (eq key "_id")}}
               <td>
-                <div class="">
+                <div class="drop-menu">
                   <div class="font-weight-bold">{{value}}</div>
                   <div class="mt-2">
                     {{! template-lint-disable no-inline-styles }}
@@ -29,8 +29,8 @@
                     >
 
                       <option selected>Action</option>
-                      <option>abc</option>
-                      <option>efg</option>
+                      <option>edit</option>
+                      <option>delete</option>
 
                     </select>
                   </div>
@@ -45,11 +45,11 @@
             <select
               style="text-align:center"
               id="selectAction2"
-              class="form-control"
+              class="form-control action-drop-menu"
             >
               <option selected>Action</option>
-              <option>abc</option>
-              <option>efg</option>
+              <option>Edit</option>
+              <option>Delete</option>
             </select></td>
         </tr>
       {{/each}}

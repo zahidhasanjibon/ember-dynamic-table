@@ -1,0 +1,42 @@
+<div class="validated-input {{this.classes}}" ...attributes>
+
+  <div class="form-group">
+    {{! template-lint-disable require-input-label }}
+    <input
+      data-test-input={{@testName}}
+      type={{@type}}
+      value={{this.value}}
+      placeholder={{@placeholder}}
+      class="form-control"
+      name={{@valuePath}}
+      {{on "input" this.updateValue}}
+      {{on "focusout" this.focusOut}}
+    />
+
+    {{#if this.isValid}}
+      <span class="valid-input fa fa-check"></span>
+    {{/if}}
+
+    <div class="input-error">
+      {{#if this.showErrorMessage}}
+        <div class="error">
+          {{v-get @model @valuePath "message"}}
+        </div>
+
+      {{else}}
+        {{#if @isShowError}}
+          <div class="error">
+            {{v-get @model @valuePath "message"}}
+          </div>
+        {{/if}}
+
+      {{/if}}
+
+      {{#if this.showWarningMessage}}
+        <div class="warning">
+          {{v-get @model @valuePath "warningMessage"}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</div>

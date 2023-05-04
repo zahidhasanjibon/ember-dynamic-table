@@ -4,32 +4,92 @@
 
       <form class="row form">
         <div class="col-12">
-          <div class="img-div mb-3">
-            <img class="img-fluid" alt="user image" src="/images/images.png" />
+          <div class="profile-div mb-2">
+            <img class="img-fluid" alt="user" src={{this.imgSrc}} />
+            <span class="file-input btn-primary file-btn mt-3 d-block mx-auto">
+              choose file
+              {{! template-lint-disable require-input-label }}
+              <input
+                class="file-input"
+                {{on "change" this.handleUploadImage}}
+                type="file"
+              />
+            </span>
           </div>
-        </div>
-        <div class="col-6">
-          <input type="text" class="form-control" placeholder="First Name" />
-        </div>
-        <div class="col-6">
-          <input type="text" class="form-control" placeholder="Last Name" />
-        </div>
-        <div class="col-6">
-          <input type="text" class="form-control" placeholder="pro Phone" />
-        </div>
-        <div class="col-6">
-          <input type="email" class="form-control" placeholder="Pro Email" />
-        </div>
-        <div class="col-6">
-          <input type="text" class="form-control" placeholder="Paid word" />
-        </div>
-        <div class="col-6">
-          <input type="text" class="form-control" placeholder="Designation" />
-        </div>
-      </form>
 
-    </div>
-    <div class="col-6">
+        </div>
+        <div class="col-12 col-md-6">
+          <ValidatedInput
+            @testName="fName"
+            @type="text"
+            @placeholder="First Name"
+            @model={{@model}}
+            @valuePath="firstName"
+            @isShowError={{this.isShowError}}
+          />
+        </div>
+        <div class="col-12 col-md-6">
+          <ValidatedInput
+            @testName="lName"
+            @type="text"
+            @placeholder="Last Name"
+            @model={{@model}}
+            @valuePath="lastName"
+            @isShowError={{this.isShowError}}
+          />
+        </div>
+        <div class="col-12 col-md-6">
+          <ValidatedInput
+            @testName="number"
+            @type="number"
+            @placeholder="Phone"
+            @model={{@model}}
+            @valuePath="phone"
+            @isShowError={{this.isShowError}}
+          />
+        </div>
+        <div class="col-12 col-md-6">
+          <ValidatedInput
+            @testName="email"
+            @type="email"
+            @placeholder="Email"
+            @model={{@model}}
+            @valuePath="email"
+            @isShowError={{this.isShowError}}
+          />
+        </div>
+        <div class="col-12 col-md-6">
+          <ValidatedInput
+            @testName="comment"
+            @type="text"
+            @placeholder="Comment"
+            @model={{@model}}
+            @valuePath="comment"
+            @isShowError={{this.isShowError}}
+          />
+        </div>
+        <div class="col-12 col-md-6">
+          <ValidatedInput
+            @testName="designation"
+            @type="text"
+            @placeholder="Designation"
+            @model={{@model}}
+            @valuePath="designation"
+            @isShowError={{this.isShowError}}
+          />
+        </div>
+
+        <div class="col-12 col-md-6 text-center">
+
+          <button
+            type="button"
+            {{on "click" this.submitForm}}
+            {{!-- disabled={{v-get @model "isInvalid"}} --}}
+            class="save-btn"
+          >Save</button>
+        </div>
+
+      </form>
 
     </div>
 
