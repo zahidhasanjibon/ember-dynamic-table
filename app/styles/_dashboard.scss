@@ -1,15 +1,15 @@
-.btn {
-  background: transparent !important;
-  color: #678740 !important;
-  border: 1px solid #678740;
-  width: 160px;
-}
-.btn:hover {
-  background-color: #678740 !important;
-  color: white !important;
-  outline: none;
-  border: 1px solid #678740;
-}
+// .button {
+//   background: transparent !important;
+//   color: #678740 !important;
+//   border: 1px solid #678740;
+//   width: 160px;
+// }
+// .buttton:hover {
+//   background-color: #678740 !important;
+//   color: white !important;
+//   outline: none;
+//   border: 1px solid #678740;
+// }
 
 .table-wrapper {
   margin-top: 2.2rem;
@@ -21,6 +21,13 @@
   margin: 0 auto;
   border: 1px solid #678740 !important;
 }
+.tab-menu > li > button:hover {
+  background-color: #678740 !important;
+  color: white !important;
+  outline: none;
+  border: 1px solid #678740;
+}
+
 .nav-item button {
   padding: 0.5rem !important;
   width: 160px;

@@ -3,52 +3,56 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
-import { inject as service } from "@ember/service";
-import Ember from "ember";
+import { inject as service } from '@ember/service';
+import Ember from 'ember';
 import Base from 'ember-simple-auth/authenticators/base';
 
 export default class CustomAuthenticator extends Base {
-    @service session
-   async restore(data) {
-    const {access_token,refresh_token} = data
-    console.log('data',data);
-    
-    if(access_token){
-      return new Ember.RSVP.Promise( (resolve, reject) => {
-         fetch('http://localhost:5000/api/check/token',{
-      headers:{
-        authorization:`Bearer ${access_token}`
-      }
-    })
-    .then((res) => res.json())
-    .then(d => {
-          if(d.success){
-            console.log('accesstokenvalid',d);
-            resolve(data)
-          } else {
-            fetch('http://localhost:5000/api/token/new',{
-              headers:{
-                authorization:`Bearer ${refresh_token}`
-              }
-            })
-            .then(res => res.json())
-            .then(d => {
-              console.log('refreshtokengenerate',d);
-              if(d.success){
-                const newData  = {
-                  refresh_token,
-                  access_token:d.access_token
-                }
-                resolve(newData)
-              }else {
-                reject()
-              }
-            })
-          }
-    })
-      })
+  @service session;
+
+   restore(data) {
+    const { access_token, refresh_token } = data;
+    console.log('data', data);
+
+    if (access_token) {
+      return new Ember.RSVP.Promise((resolve, reject) => {
+        fetch('http://localhost:5000/api/check/token', {
+          headers: {
+            authorization: `Bearer ${access_token}`,
+          },
+        })
+          .then((res) => res.json())
+          .then((d) => {
+            if (d.success) {
+              console.log('accesstokenvalid', d);
+              resolve(data);
+            } else {
+              console.log('fetch new access token');
+              fetch('http://localhost:5000/api/token/new', {
+                headers: {
+                  authorization: `Bearer ${refresh_token}`,
+                },
+              })
+                .then((res) => res.json())
+                .then((d) => {
+                  console.log('refreshtokengenerate', d);
+                  if (d.success) {
+                    const newData = {
+                      refresh_token:d.refresh_token,
+                      access_token: d.access_token,
+                    };
+                    resolve(newData);
+                  } else {
+                    console.log('refresh token invalid');
+                    reject();
+                    // this.invalidate()
+                  }
+                });
+            }
+          });
+      });
     } else {
-       throw 'no valid token data'
+      throw 'no valid token data';
     }
     //  fetch('http://localhost:5000/api/check/token',{
     //   headers:{
@@ -64,7 +68,6 @@ export default class CustomAuthenticator extends Base {
     //         throw 'invalid token'
     //     }
     // })
-
 
     // return new Promise((resolve, reject) => {
     //    const {access_token} = data
@@ -91,7 +94,7 @@ export default class CustomAuthenticator extends Base {
     //     fetch('http://localhost:5000/api/token/new',{
     //       headers:{
     //         authorization:`Bearer ${refresh_token}`
-    //       }   
+    //       }
     //     })
     //     .then(res => res.json())
     //     .then(tokenData => {
@@ -119,7 +122,7 @@ export default class CustomAuthenticator extends Base {
     //     console.log(data);
     //     // eslint-disable-next-line ember/new-module-imports
     //     return new Ember.RSVP.Promise( (resolve, reject) => {
-      
+
     //       // const {access_token} = data
     //       //   fetch('http://localhost:5000/api/check/token',{
     //       //     headers:{
@@ -131,11 +134,10 @@ export default class CustomAuthenticator extends Base {
     //     });
     //   }
 
-
     // })
     // eslint-disable-next-line ember/new-module-imports
     // return new Ember.RSVP.Promise( (resolve, reject) => {
-      
+
     //   // const {access_token} = data
     //   //   fetch('http://localhost:5000/api/check/token',{
     //   //     headers:{
@@ -144,19 +146,14 @@ export default class CustomAuthenticator extends Base {
     //   //   })
     //   //   .then((data) =>console.log(data))
 
-    //   if (access_token) {     
+    //   if (access_token) {
     //     resolve(data);
     //   } else {
     //     console.log("Old logging system detected. Logging out.");
     //     reject();
     //   }
     // });
-
-
-
   }
-
-  
 
   async authenticate(userName, password) {
     const response = await fetch('http://localhost:5000/api/token', {
@@ -169,13 +166,12 @@ export default class CustomAuthenticator extends Base {
         password,
       }),
     });
-    if(response.ok){
-        return await response.json()
+    if (response.ok) {
+      return await response.json();
     } else {
-        const error = await response.text()
-        throw new Error(error)
+      const error = await response.text();
+      throw new Error(error);
     }
-
   }
 
   async invalidate(data) {
@@ -186,4 +182,4 @@ export default class CustomAuthenticator extends Base {
     //   });
     // });
   }
-};
+}

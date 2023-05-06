@@ -8,9 +8,25 @@
 <LinkTo style="margin-left:14px;" @route="dashboard">
   dashboard
 </LinkTo>
+<LinkTo style="margin-left:14px;" @route="profile">
+  Profile
+</LinkTo>
+<LinkTo style="margin-left:14px;" @route="admin-panel">
+  Admin panle
+</LinkTo>
 
 {{#if this.session.isAuthenticated}}
-  <button type="button" style="margin-left:14px;" {{on "click" this.logout}}>
+  <button
+    type="button"
+    style="margin-left:14px;border:1px solid blue;"
+    {{on "click" this.logout}}
+  >
     logout
   </button>
+
+{{else}}
+  <button type="button" style="margin-left:14px;border:1px solid blue;">
+    <LinkTo @route="login">login</LinkTo>
+  </button>
+
 {{/if}}

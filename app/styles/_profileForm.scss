@@ -8,7 +8,7 @@
   object-fit: cover;
   border-radius: 50%;
 }
-.form {
+.profile-form {
   grid-row-gap: 35px;
 }
 .file-btn {
@@ -43,7 +43,7 @@ input[readonly] {
   outline: none;
   border: 1px solid #678740 !important;
 }
-form {
+.profile-form {
   border: 1px solid #f8faf8;
   border-radius: 5px;
   padding: 44px 15px;

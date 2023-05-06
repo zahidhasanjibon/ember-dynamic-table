@@ -17,6 +17,8 @@ export default class LoginController extends Controller {
         this.userName,
         this.password
       );
+      // console.log(this.session);
+      // console.log(this.prevTrans);
       // console.log('transition', this.previousTrans);
       // let previousTransition = this.previousTrans;
       // if (previousTransition) {
@@ -26,6 +28,15 @@ export default class LoginController extends Controller {
       //   // Default back to homepage
       //   this.router.transitionTo('index');
       // }
+      console.log(this.prevTrans);
+      let previousTransition = this.prevTrans;
+      if (previousTransition) {
+        this.prevTrans = null;
+        previousTransition.retry();
+      } else {
+        // Default back to homepage
+        this.router.transitionTo('index');
+      }
     } catch (error) {
       this.error = error;
     }
