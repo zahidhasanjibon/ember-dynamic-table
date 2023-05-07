@@ -1,0 +1,65 @@
+.admin-content {
+  padding: 0px;
+}
+.admin-side-navbar {
+  padding: 0px;
+}
+
+.navbar {
+  padding: 0.5rem 0.6rem;
+}
+
+.navbar-logo {
+  width: 100px;
+}
+.nav-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+
+// table for table css style
+.table tbody tr > td {
+  border: 1px dotted blue;
+}
+.table tbody tr > td:first-child {
+  width: 30px;
+  font-weight: bold;
+}
+
+.table thead tr > th {
+  text-align: center;
+}
+.table thead tr > th:first-child {
+  border-left: 1px solid green;
+}
+.table thead tr > th:last-child {
+  border-right: 1px solid green;
+}
+.table thead tr > th {
+  color: white;
+}
+.table tbody tr > td > select {
+  border: none;
+}
+.new-admin-btn-div {
+  text-align: end;
+}
+.new-admin-btn {
+  background-color: #4db14d;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  color: white;
+  &:hover {
+    color: blue;
+  }
+}
+
+// side navigation bar style
+
+.side-navbar {
+  height: calc(100vh - 20vh);
+}

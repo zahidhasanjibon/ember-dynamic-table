@@ -1,0 +1,83 @@
+{{page-title "Dashboard"}}
+
+{{page-title "Dashboard"}}
+
+<div class="container">
+
+  <ul
+    class="d-flex justify-content-center mt-5 nav nav-pills mb-3 tab-menu"
+    id="pills-tab"
+    role="tablist"
+  >
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="pills-home-tab"
+        data-toggle="pill"
+        data-target="#pills-home"
+        type="button"
+        role="tab"
+        aria-controls="pills-home"
+        aria-selected="true"
+        {{on "click" (fn this.getZakatTakerData "zakat")}}
+      >Zakat taker</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        data-test-loan-btn
+        class="nav-link"
+        id="pills-profile-tab"
+        data-toggle="pill"
+        data-target="#pills-profile"
+        type="button"
+        role="tab"
+        aria-controls="pills-profile"
+        aria-selected="false"
+        {{on "click" (fn this.getLoanData "loan")}}
+      >Loan payout</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="pills-contact-tab"
+        data-toggle="pill"
+        data-target="#pills-contact"
+        type="button"
+        role="tab"
+        aria-controls="pills-contact"
+        aria-selected="false"
+        {{on "click" (fn this.getMedicalData "medical")}}
+      >Medical</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="pills-a-tab"
+        data-toggle="pill"
+        data-target="#pills-a"
+        type="button"
+        role="tab"
+        aria-controls="pills-a"
+        aria-selected="false"
+        {{on "click" (fn this.getEducationData "education")}}
+      >Education training</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="pills-b-tab"
+        data-toggle="pill"
+        data-target="#pills-b"
+        type="button"
+        role="tab"
+        aria-controls="pills-b"
+        aria-selected="false"
+        {{on "click" (fn this.getFamilyData "family")}}
+      >Family member</button>
+    </li>
+  </ul>
+
+  <br />
+  <Table @tableData={{this.data}} />
+
+</div>

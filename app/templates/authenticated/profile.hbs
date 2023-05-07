@@ -1,0 +1,23 @@
+{{page-title "Profile"}}
+
+<ProfileForm @model={{@model}} />
+
+{{!-- <TextInput @model={{this.model}} @onSubmit={{this.handleSubmit}} /> --}}
+
+{{!-- <form>
+  {{! template-lint-disable require-input-label }}
+  <Input @value={{@model.name}} placeholder="Username" />
+  {{#if (v-get @model "name" "isInvalid")}}
+    <div class="error">
+      {{v-get @model "name" "message"}}
+    </div>
+  {{/if}}
+  <Input @value={{@model.email}} placeholder="email" />
+  {{#if (v-get @model "name" "isInvalid")}}
+    <div class="error">
+      {{v-get @model "email" "message"}}
+    </div>
+  {{/if}}
+
+  <button type="submit" disabled={{v-get @model "isInvalid"}}>Submit</button>
+</form> --}}

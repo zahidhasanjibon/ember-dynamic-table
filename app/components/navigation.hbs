@@ -8,12 +8,24 @@
 <LinkTo style="margin-left:14px;" @route="dashboard">
   dashboard
 </LinkTo>
+{{! <LinkTo style="margin-left:14px;" @route="authenticated.dashboard">
+  dashboard
+</LinkTo> }}
 <LinkTo style="margin-left:14px;" @route="profile">
   Profile
 </LinkTo>
+{{! <LinkTo style="margin-left:14px;" @route="authenticated.profile">
+  Profile
+</LinkTo> }}
 <LinkTo style="margin-left:14px;" @route="admin-panel">
   Admin panle
 </LinkTo>
+{{! <LinkTo style="margin-left:14px;" @route="secret">
+  secret
+</LinkTo> }}
+{{! <LinkTo style="margin-left:14px;" @route="authenticated.secret">
+  secret
+</LinkTo> }}
 
 {{#if this.session.isAuthenticated}}
   <button

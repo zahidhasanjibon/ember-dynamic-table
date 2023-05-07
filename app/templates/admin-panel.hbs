@@ -1,4 +1,8 @@
 {{page-title "AdminPanel"}}
-<h1>Admin Panel</h1>
-<AdminPanel />
+
+<AdminPanel
+  @addUserModel={{@model.addUserModel}}
+  @color="#4db14d"
+  @searchColor="white"
+/>
 {{outlet}}

@@ -13,8 +13,16 @@ Router.map(function () {
   this.route('login');
   // this.route('error');
   this.route('inbox');
+
   // this.route('authenticated', { path: '' }, function () {
   //   // all routes that require the session to be authenticated
   // });
   this.route('admin-panel');
+  this.route('index', { path: '' });
+
+  this.route('authenticated', function () {
+    this.route('secret');
+    this.route('dashboard');
+    this.route('profile');
+  });
 });

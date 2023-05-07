@@ -53,6 +53,16 @@ export default class InboxRoute extends Route {
     return this.store.findAll('message');
   }
 
+  // afterModel(model) {
+  //   console.log('model', model.length);
+  //   // return this.store.findAll('message');
+  //   if (!this.session.isAuthenticated) {
+  //     if (model.length === 0) {
+  //       return this.store.findAll('message');
+  //     }
+  //   }
+  // }
+
   @action
   error(error, transition) {
     console.log('error', error);
