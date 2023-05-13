@@ -1,92 +1,89 @@
-<div class="">
+<form class="row profile-form">
 
-  <form class="row profile-form">
-    <div class="col-12">
-      <div class="profile-div mb-2">
-        <img class="img-fluid" alt="user" src={{this.imgSrc}} />
-        <span class="file-input btn-primary file-btn mt-3 d-block mx-auto">
-          choose file
-          {{! template-lint-disable require-input-label }}
-          <input
-            class="file-input"
-            {{on "change" this.handleUploadImage}}
-            type="file"
-          />
-        </span>
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6">
-      <ValidatedInput
-        @testName="fName"
-        @type="text"
-        @placeholder="First Name"
-        @model={{@model}}
-        @valuePath="firstName"
-        @isShowError={{this.isShowError}}
-      />
-    </div>
-    <div class="col-12 col-md-6">
-      <ValidatedInput
-        @testName="lName"
-        @type="text"
-        @placeholder="Last Name"
-        @model={{@model}}
-        @valuePath="lastName"
-        @isShowError={{this.isShowError}}
-      />
-    </div>
-    <div class="col-12 col-md-6">
-      <ValidatedInput
-        @testName="number"
-        @type="number"
-        @placeholder="Phone"
-        @model={{@model}}
-        @valuePath="phone"
-        @isShowError={{this.isShowError}}
-      />
-    </div>
-    <div class="col-12 col-md-6">
-      <ValidatedInput
-        @testName="email"
-        @type="email"
-        @placeholder="Email"
-        @model={{@model}}
-        @valuePath="email"
-        @isShowError={{this.isShowError}}
-      />
-    </div>
-    <div class="col-12 col-md-6">
-      <ValidatedInput
-        @testName="comment"
-        @type="text"
-        @placeholder="Comment"
-        @model={{@model}}
-        @valuePath="comment"
-        @isShowError={{this.isShowError}}
-      />
-    </div>
-    <div class="col-12 col-md-6">
-      <ValidatedInput
-        @testName="designation"
-        @type="text"
-        @placeholder="Designation"
-        @model={{@model}}
-        @valuePath="designation"
-        @isShowError={{this.isShowError}}
-      />
+  <div class="col-12">
+    <div class="profile-div mb-2">
+      <img class="img-fluid" alt="user" src={{this.imgSrc}} />
+      <span class="file-input btn-primary file-btn mt-3 d-block mx-auto">
+        choose file
+        {{! template-lint-disable require-input-label }}
+        <input
+          class="file-input"
+          {{on "change" this.handleUploadImage}}
+          type="file"
+        />
+      </span>
     </div>
 
-    <div class="col-12 col-md-6 text-center">
+  </div>
+  <div class="col-12 col-md-6">
+    <ValidatedInput
+      @testName="fName"
+      @type="text"
+      @placeholder="First Name"
+      @model={{@model}}
+      @valuePath="firstName"
+      @isShowError={{this.isShowError}}
+    />
+  </div>
+  <div class="col-12 col-md-6">
+    <ValidatedInput
+      @testName="lName"
+      @type="text"
+      @placeholder="Last Name"
+      @model={{@model}}
+      @valuePath="lastName"
+      @isShowError={{this.isShowError}}
+    />
+  </div>
+  <div class="col-12 col-md-6">
+    <ValidatedInput
+      @testName="number"
+      @type="number"
+      @placeholder="Phone"
+      @model={{@model}}
+      @valuePath="phone"
+      @isShowError={{this.isShowError}}
+    />
+  </div>
+  <div class="col-12 col-md-6">
+    <ValidatedInput
+      @testName="email"
+      @type="email"
+      @placeholder="Email"
+      @model={{@model}}
+      @valuePath="email"
+      @isShowError={{this.isShowError}}
+    />
+  </div>
+  <div class="col-12 col-md-6">
+    <ValidatedInput
+      @testName="comment"
+      @type="text"
+      @placeholder="Comment"
+      @model={{@model}}
+      @valuePath="comment"
+      @isShowError={{this.isShowError}}
+    />
+  </div>
+  <div class="col-12 col-md-6">
+    <ValidatedInput
+      @testName="designation"
+      @type="text"
+      @placeholder="Designation"
+      @model={{@model}}
+      @valuePath="designation"
+      @isShowError={{this.isShowError}}
+    />
+  </div>
 
-      <button
-        type="button"
-        {{on "click" this.submitForm}}
-        {{!-- disabled={{v-get @model "isInvalid"}} --}}
-        class="save-btn"
-      >Save</button>
-    </div>
+  <div class="col-12 col-md-6 text-center">
 
-  </form>
+    <button
+      type="button"
+      {{on "click" this.submitForm}}
+      {{!-- disabled={{v-get @model "isInvalid"}} --}}
+      class="save-btn"
+    >Save</button>
+  </div>
 
-</div>
+</form>

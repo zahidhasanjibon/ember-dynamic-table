@@ -1,6 +1,22 @@
 {
   "adminPanel": {
     "id": 1,
-    "name": "zakat"
+    "name": "admin-panel",
+    "navbarTextColor": "white",
+    "navbarLogo": "https://sadaqatulzakat.com/assets/images/logo-53b2e5631ce2cce6c254cd6c6fff98f9.png",
+    "navbarColor": "#4db14",
+    "searchIcon": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Search_Icon.svg",
+    "searchColor": "white",
+    "profilePic": "square",
+    "sideNavbarColor": "#3a983a",
+    "userTableColor": "#4db14d",
+    "archiveUserTableColor": "#677a81",
+    "sideNavbarBtns": [
+      "System",
+      "User Roles",
+      "Manage Admins",
+      "Zakat Requests",
+      "Zakat Donators"
+    ]
   }
 }

@@ -50,7 +50,10 @@ export default class InboxRoute extends Route {
   }
 
   model() {
-    return this.store.findAll('message');
+    if (this.session.isAuthenticated) {
+      return this.store.findAll('message');
+    }
+    return;
   }
 
   // afterModel(model) {

@@ -25,4 +25,8 @@ Router.map(function () {
     this.route('dashboard');
     this.route('profile');
   });
+
+  this.route('single', function () {
+    this.route('zakatrequests');
+  });
 });

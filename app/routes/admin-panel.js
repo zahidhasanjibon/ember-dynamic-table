@@ -5,9 +5,19 @@ import { hash } from 'rsvp';
 export default class AdminPanelRoute extends Route {
   @service store;
   model() {
+    // let data = null;
+
+    // fetch(){
+    //    fetch('/api/adminPanels.json')
+    // }
+
+    // .then((res) => res.json())
+    // .then((d) => {
     return hash({
-      userTableData: this.store.findAll('admin-panel'),
+      // adminPanelData: fetch('/api/adminPanels.json').then((res) => res.json()),
+      adminPanelData: this.store.queryRecord('admin-panel', {}),
       addUserModel: this.store.createRecord('profile'),
     });
+    // });
   }
 }

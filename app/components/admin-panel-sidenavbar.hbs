@@ -1,0 +1,21 @@
+<div class="side-navbar" style="background-color: {{@navbarColor}}">
+
+  <div class="account d-flex align-items-center">
+    <div class="account-logo-wrapper"><img
+        class="account-logo {{@profilePicShape}}"
+        alt="zakatlogo"
+        src={{@accountProfilePic}}
+      /></div>
+    <div style="cursor:pointer" class="ml-4">Sign Out</div>
+  </div>
+
+  <div class="side-menus">
+    <ul class="menu-list mt-4">
+      {{#each @menuData as |menu|}}
+        <li>{{menu}}</li>
+      {{/each}}
+    </ul>
+
+  </div>
+
+</div>

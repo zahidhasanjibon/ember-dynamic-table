@@ -3,13 +3,17 @@
   width: 50%;
 }
 .profile-div img {
-  width: 120px;
-  height: 120px;
+  width: 70px;
+  height: 70px;
   object-fit: cover;
   border-radius: 50%;
 }
 .profile-form {
-  grid-row-gap: 35px;
+  grid-row-gap: 5px;
+  margin: 0px;
+  border-radius: 5px;
+  padding: 12px 0px;
+  // box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 .file-btn {
   position: relative;
@@ -43,12 +47,7 @@ input[readonly] {
   outline: none;
   border: 1px solid #678740 !important;
 }
-.profile-form {
-  border: 1px solid #f8faf8;
-  border-radius: 5px;
-  padding: 44px 15px;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
+
 .file-btn,
 .save-btn {
   background: transparent !important;
@@ -69,6 +68,15 @@ input[readonly] {
 }
 .error {
   color: red;
+}
+
+.close-icon {
+  position: absolute;
+  right: 16px;
+  font-size: 22px;
+  border: none;
+  z-index: 99;
+  background-color: transparent;
 }
 
 // responsive

@@ -1,0 +1,38 @@
+.zakat-request-content {
+  margin-top: 1.2rem;
+}
+.zakat-request-table {
+  height: 1px;
+}
+.zakat-request-table thead tr > th {
+  font-size: 14px;
+}
+.zakat-request-table tbody tr > td:first-child {
+  width: 3% !important;
+  font-weight: normal;
+  text-align: center;
+}
+.zakat-request-table th,
+.zakat-request-table td {
+  vertical-align: middle !important;
+}
+.zakat-request-table tbody tr > td {
+  padding: 3px !important;
+}
+.zakat-request-status > div {
+  background-color: #4db14d;
+  font-weight: 500;
+  color: white;
+  text-align: start;
+  padding-left: 8px;
+  border-radius: 2px;
+  width: 170px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.zakat-request-status.active > div {
+  background-color: orange;
+  color: black;
+  padding: 8px 0px 8px 8px;
+}

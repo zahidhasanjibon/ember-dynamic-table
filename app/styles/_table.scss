@@ -1,35 +1,31 @@
-body {
-  padding-bottom: 200px;
-}
-
-table thead td {
+table .thead td {
   table-layout: fixed !important;
   width: 40px !important;
   overflow: hidden !important;
   word-wrap: break-word !important;
 }
 
-thead tr > td {
+.thead tr > td {
   text-align: center !important;
   font-weight: bold !important;
 }
-table thead tr > td {
+table .thead tr > td {
   background-color: #678740;
   color: white;
   border: 1px solid #55eb55;
 }
 
-tbody tr > td {
+.tbody tr > td {
   text-align: center !important;
   padding: 0.85rem !important;
   border: 1px solid green;
   vertical-align: middle !important;
   min-width: 100px;
 }
-thead tr > td:first-child {
+.thead tr > td:first-child {
   border-left: 1px solid #678740;
 }
-thead tr > td:last-child {
+.thead tr > td:last-child {
   border-right: 1px solid #678740;
 }
 

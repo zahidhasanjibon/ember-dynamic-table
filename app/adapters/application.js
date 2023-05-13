@@ -10,6 +10,10 @@ export default class ApplicationAdapter extends RESTAdapter {
   @service store;
   host = 'http://localhost:5000';
   // refresh_token = this.session.data?.authenticated?.refresh_token;
+  pathForType(type) {
+    console.log('type', type);
+    return 'data';
+  }
 
   @computed('session.{data.authenticated.access_token,isAuthenticated}')
   get headers() {

@@ -2,15 +2,22 @@
   padding: 0px;
 }
 .admin-side-navbar {
-  padding: 0px;
+  padding: 0px !important;
+}
+.main-wrapper {
+  padding-left: 5px;
+}
+.content-wrapper {
+  min-height: 96vh;
 }
 
+//navbar style
 .navbar {
   padding: 0.5rem 0.6rem;
 }
 
 .navbar-logo {
-  width: 100px;
+  width: 65px;
 }
 .nav-title {
   margin: 0;
@@ -18,28 +25,46 @@
   font-weight: 500;
   color: white;
 }
+// .navbar {
+//   height: 55px;
+// }
 
 // table for table css style
-.table tbody tr > td {
-  border: 1px dotted blue;
+.admin-table {
+  margin: 0px !important;
 }
+.user-content-wrapper {
+  margin: 1.2rem 0rem 0rem 0rem;
+}
+.table-div {
+  padding: 0px;
+}
+
+// .table tbody tr > td {
+//   border: 1px dotted blue;
+//   padding: 4px !important;
+// }
+// .table tbody tr > td:first-child {
+
+// }
 .table tbody tr > td:first-child {
-  width: 30px;
+  width: 6% !important;
   font-weight: bold;
+  text-align: center;
 }
 
 .table thead tr > th {
   text-align: center;
 }
-.table thead tr > th:first-child {
-  border-left: 1px solid green;
-}
-.table thead tr > th:last-child {
-  border-right: 1px solid green;
-}
-.table thead tr > th {
-  color: white;
-}
+// .table thead tr > th:first-child {
+//   border-left: 1px solid green;
+// }
+// .table thead tr > th:last-child {
+//   border-right: 1px solid green;
+// }
+// .table thead tr > th {
+//   color: white;
+// }
 .table tbody tr > td > select {
   border: none;
 }
@@ -47,19 +72,105 @@
   text-align: end;
 }
 .new-admin-btn {
-  background-color: #4db14d;
   padding: 5px 10px;
   border: none;
   outline: none;
   font-weight: bold;
   color: white;
-  &:hover {
-    color: blue;
-  }
+  // &:hover {
+  //   color: blue;
+  // }
+}
+.table-user-img-wrapper {
+  width: 60px;
+}
+.table-user-img-wrapper .user-img {
+  display: block;
+  height: auto;
+  width: 100%;
 }
 
 // side navigation bar style
 
 .side-navbar {
-  height: calc(100vh - 20vh);
+  height: 100%;
+  padding: 10px 20px 0px 20px;
+  color: white;
+  position: fixed;
+  width: 16.6667%;
+  right: 0;
+}
+.footer {
+  height: 30px;
+  padding: 0px 12px;
+  font-weight: bold;
+  color: white;
+}
+.account-logo-wrapper {
+  width: 60px;
+}
+// for zakat request navabr
+.account-logo-wrapper-zakat-request {
+  width: 50px;
+}
+
+.account-logo {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.account-logo.square {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.account-logo.round {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+.side-menus .menu-list {
+  list-style: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.side-menus .menu-list > li {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 6px 10px;
+  margin: 2px 0px;
+  &:hover {
+    background-color: orange;
+  }
+}
+.side-menus .menu-list > li.active {
+  background-color: orange;
+}
+
+// add user form
+.add-user-form {
+  padding: 0 20px;
+}
+.divider {
+  height: 2px;
+  margin: 33px 0px;
+  background: #4db14d;
+}
+
+// modal style
+
+.add-user-modal {
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  left: 50%;
+  background: tomato;
+  transform: translate(-50%, -50%);
+}
+
+.search-img {
+  height: 35px;
+  width: 27px;
 }

@@ -2,7 +2,7 @@
 
   <table class="table fadde" {{did-insert this.dragFunctionality}}>
 
-    <thead>
+    <thead class="thead">
       <tr>
         {{#each @tableData.tableColumn as |column|}}
           <td>{{column}}</td>
@@ -11,7 +11,7 @@
 
       </tr>
     </thead>
-    <tbody>
+    <tbody class="tbody">
 
       {{#each @tableData.data as |row|}}
         <tr>

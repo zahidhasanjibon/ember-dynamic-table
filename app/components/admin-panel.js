@@ -7,4 +7,8 @@ export default class AdminPanelComponent extends Component {
   @action showAddUserModal() {
     this.isAddUserModalShow = true;
   }
+  @action hideAddUserModal() {
+    console.log('in');
+    this.isAddUserModalShow = false;
+  }
 }
